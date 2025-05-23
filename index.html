@@ -13,49 +13,49 @@
 </head>
 <body class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-4 font-sans">
 
-    <div class="bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl text-center max-w-3xl w-full">
+    <div class="bg-gray-800 p-4 sm:p-6 md:p-8 rounded-xl shadow-2xl text-center max-w-3xl w-full">
         
-        <div class="mb-8">
-            <svg class="w-16 h-16 text-yellow-400 mx-auto animate-bounce" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <div class="mb-4 sm:mb-6 md:mb-8">
+            <svg class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 text-yellow-400 mx-auto animate-bounce" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
             </svg>
         </div>
 
-        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-yellow-400">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-yellow-400">
             🚧 Site en Construction 🚧
         </h1>
         
-        <p class="text-lg md:text-xl text-gray-300 mb-8">
+        <p class="text-sm sm:text-base md:text-lg text-gray-300 mb-6 sm:mb-8">
             Nous sommes en train de concocter quelque chose d'incroyable pour vous !<br>
             Notre nouveau site sera bientôt en ligne.
         </p>
 
-        <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 mb-10 text-yellow-500">
+        <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8 md:mb-10 text-yellow-500">
             <div>
-                <div id="days" class="text-4xl md:text-6xl font-mono font-bold">00</div>
-                <div class="text-xs md:text-sm text-gray-400 uppercase tracking-wider">Jours</div>
+                <div id="days" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-mono font-bold">00</div>
+                <div class="text-xs uppercase tracking-wider mt-1 md:text-sm text-gray-400">Jours</div>
             </div>
             <div>
-                <div id="hours" class="text-4xl md:text-6xl font-mono font-bold">00</div>
-                <div class="text-xs md:text-sm text-gray-400 uppercase tracking-wider">Heures</div>
+                <div id="hours" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-mono font-bold">00</div>
+                <div class="text-xs uppercase tracking-wider mt-1 md:text-sm text-gray-400">Heures</div>
             </div>
             <div>
-                <div id="minutes" class="text-4xl md:text-6xl font-mono font-bold">00</div>
-                <div class="text-xs md:text-sm text-gray-400 uppercase tracking-wider">Minutes</div>
+                <div id="minutes" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-mono font-bold">00</div>
+                <div class="text-xs uppercase tracking-wider mt-1 md:text-sm text-gray-400">Minutes</div>
             </div>
             <div>
-                <div id="seconds" class="text-4xl md:text-6xl font-mono font-bold">00</div>
-                <div class="text-xs md:text-sm text-gray-400 uppercase tracking-wider">Secondes</div>
+                <div id="seconds" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-mono font-bold">00</div>
+                <div class="text-xs uppercase tracking-wider mt-1 md:text-sm text-gray-400">Secondes</div>
             </div>
         </div>
 
-        <p id="launch-message" class="text-md text-gray-400">
+        <p id="launch-message" class="text-xs sm:text-sm md:text-base text-gray-400">
             Lancement prévu pour <span id="target-day" class="font-semibold text-yellow-400">Dimanche</span> prochain !
         </p>
 
     </div>
 
-    <footer class="mt-12 text-center text-sm text-gray-500">
+    <footer class="mt-6 sm:mt-8 md:mt-10 text-center text-xs sm:text-sm text-gray-500">
         © <span id="current-year"></span> VotreEntreprise. Tous droits réservés.
     </footer>
 
@@ -70,10 +70,12 @@
             const targetDayEl = document.getElementById('target-day');
             document.getElementById('current-year').textContent = new Date().getFullYear();
 
-            // Définir la date cible : 7 jours à partir de maintenant
+            // Définir la date cible : 3 jours à partir de maintenant (exemple)
             let targetDate = new Date();
             targetDate.setDate(targetDate.getDate() + 3);
-            // Optionnel: pour cibler minuit du 7ème jour
+            // Optionnel: pour cibler minuit précis d'un jour futur
+            // targetDate = new Date("2024-12-25T00:00:00"); // ex: new Date("YYYY-MM-DDTHH:MM:SS")
+            // ou pour minuit du jour X:
             // targetDate.setHours(0, 0, 0, 0); 
 
             // Mettre à jour le nom du jour cible
@@ -87,8 +89,11 @@
 
                 if (distance < 0) {
                     clearInterval(interval);
-                    countdownEl.innerHTML = "<div class='col-span-2 sm:col-span-4 text-3xl md:text-4xl text-green-400 py-4'>🚀 Le site est lancé !</div>";
+                    // Message de lancement avec des tailles de police responsives
+                    countdownEl.innerHTML = "<div class='col-span-2 sm:col-span-4 text-xl sm:text-2xl md:text-3xl text-green-400 py-4'>🚀 Le site est lancé !</div>";
                     launchMessageEl.textContent = "Bienvenue sur notre nouveau site !";
+                    launchMessageEl.classList.remove('text-gray-400');
+                    launchMessageEl.classList.add('text-green-300', 'font-semibold', 'text-sm', 'sm:text-base'); // Assurer la responsivité du message
                     return;
                 }
 
