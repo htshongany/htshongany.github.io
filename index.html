@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site en Construction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Optionnel: pour une police personnalisée si besoin */
+        /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap'); */
+        /* body { font-family: 'Poppins', sans-serif; } */
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-4 font-sans">
+
+    <div class="bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl text-center max-w-3xl w-full">
+        
+        <div class="mb-8">
+            <svg class="w-16 h-16 text-yellow-400 mx-auto animate-bounce" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+            </svg>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-yellow-400">
+            🚧 Site en Construction 🚧
+        </h1>
+        
+        <p class="text-lg md:text-xl text-gray-300 mb-8">
+            Nous sommes en train de concocter quelque chose d'incroyable pour vous !<br>
+            Notre nouveau site sera bientôt en ligne.
+        </p>
+
+        <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6 mb-10 text-yellow-500">
+            <div>
+                <div id="days" class="text-4xl md:text-6xl font-mono font-bold">00</div>
+                <div class="text-xs md:text-sm text-gray-400 uppercase tracking-wider">Jours</div>
+            </div>
+            <div>
+                <div id="hours" class="text-4xl md:text-6xl font-mono font-bold">00</div>
+                <div class="text-xs md:text-sm text-gray-400 uppercase tracking-wider">Heures</div>
+            </div>
+            <div>
+                <div id="minutes" class="text-4xl md:text-6xl font-mono font-bold">00</div>
+                <div class="text-xs md:text-sm text-gray-400 uppercase tracking-wider">Minutes</div>
+            </div>
+            <div>
+                <div id="seconds" class="text-4xl md:text-6xl font-mono font-bold">00</div>
+                <div class="text-xs md:text-sm text-gray-400 uppercase tracking-wider">Secondes</div>
+            </div>
+        </div>
+
+        <p id="launch-message" class="text-md text-gray-400">
+            Lancement prévu pour <span id="target-day" class="font-semibold text-yellow-400">Dimanche</span> prochain !
+        </p>
+
+    </div>
+
+    <footer class="mt-12 text-center text-sm text-gray-500">
+        © <span id="current-year"></span> VotreEntreprise. Tous droits réservés.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+            const countdownEl = document.getElementById('countdown');
+            const launchMessageEl = document.getElementById('launch-message');
+            const targetDayEl = document.getElementById('target-day');
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Définir la date cible : 7 jours à partir de maintenant
+            let targetDate = new Date();
+            targetDate.setDate(targetDate.getDate() + 3);
+            // Optionnel: pour cibler minuit du 7ème jour
+            // targetDate.setHours(0, 0, 0, 0); 
+
+            // Mettre à jour le nom du jour cible
+            const daysOfWeek = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+            targetDayEl.textContent = daysOfWeek[targetDate.getDay()];
+
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = targetDate.getTime() - now;
+
+                if (distance < 0) {
+                    clearInterval(interval);
+                    countdownEl.innerHTML = "<div class='col-span-2 sm:col-span-4 text-3xl md:text-4xl text-green-400 py-4'>🚀 Le site est lancé !</div>";
+                    launchMessageEl.textContent = "Bienvenue sur notre nouveau site !";
+                    return;
+                }
+
+                const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((distance % (1000 * 60)) / 1000);
+
+                daysEl.textContent = String(d).padStart(2, '0');
+                hoursEl.textContent = String(h).padStart(2, '0');
+                minutesEl.textContent = String(m).padStart(2, '0');
+                secondsEl.textContent = String(s).padStart(2, '0');
+            }
+
+            const interval = setInterval(updateCountdown, 1000);
+            updateCountdown(); // Appel initial pour afficher immédiatement
+        });
+    </script>
+
+</body>
+</html>
