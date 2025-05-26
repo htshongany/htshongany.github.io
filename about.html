@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   <!-- SEO METADATA for About Page -->
+   <title>Mon Parcours - Hamadou Tshongany</title>
+   <meta name="description" content="Découvrez le parcours professionnel et académique de Hamadou Tshongany, développeur Python. Formations, expériences, certifications et évolution de carrière.">
+   <meta name="author" content="Hamadou Tshongany">
+   <meta name="keywords" content="Hamadou Tshongany, Parcours professionnel, Formation, Expériences, Développeur Python, AWS re/Start, UPN, Cisco, Huawei, Webmaster, Carrière">
+   <meta name="robots" content="index, follow">
+
+   <!-- Open Graph / Facebook for About Page -->
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="https://htshongany.github.io/about.html">
+   <meta property="og:title" content="Mon Parcours Professionnel - Hamadou Tshongany">
+   <meta property="og:description" content="Découvrez l'évolution professionnelle et éducative de Hamadou Tshongany à travers ses expériences et formations clés.">
+   <meta property="og:image" content="assets/images/profile_placeholder.png">
+
+   <!-- Twitter for About Page -->
+   <meta property="twitter:card" content="summary_large_image">
+   <meta property="twitter:url" content="https://htshongany.github.io/about.html">
+   <meta property="twitter:title" content="Mon Parcours Professionnel - Hamadou Tshongany">
+   <meta property="twitter:description" content="Découvrez l'évolution professionnelle et éducative de Hamadou Tshongany à travers ses expériences et formations clés.">
+   <meta property="twitter:image" content="assets/images/profile_placeholder.png">
+
+   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+   <!-- END SEO METADATA -->
+
+   <script src="https://cdn.tailwindcss.com"></script>
+   <script>
+       tailwind.config = {
+           theme: {
+               extend: {
+                   fontFamily: {
+                       sans: ['Inter', 'sans-serif'],
+                   },
+                   colors: {
+                       primary: '#2563eb',
+                       'primary-dark': '#1d4ed8',
+                       secondary: '#64748b',
+                       'light-bg': '#f8fafc',
+                       'card-bg': '#ffffff',
+                       'text-main': '#1f293b',
+                       'text-muted': '#64748b',
+                       'text-on-primary': '#ffffff',
+                       'text-on-dark-bg': '#e2e8f0',
+                       'footer-bg': '#1e293b',
+                       'footer-text': '#94a3b8',
+                       'footer-link-hover-bg': '#334155',
+                       'cyan-custom': '#0891b2',
+                       'cyan-custom-light': '#155e75',
+                       'cyan-custom-bg': '#cffafe',
+                       // Couleurs pour la scrollbar
+                       'scrollbar-track': '#e2e8f0', // slate-200
+                       'scrollbar-thumb': '#2563eb', // primary
+                       'scrollbar-thumb-hover': '#1d4ed8' // primary-dark
+                   },
+                   boxShadow: {
+                       'custom-light': '0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.07)',
+                       'custom-md': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)',
+                   },
+                   screens: {
+                       'xs': '475px',
+                   }
+               }
+           }
+       }
+   </script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+   <style>
+       html { scroll-behavior: smooth; }
+       body {
+           -webkit-font-smoothing: antialiased;
+           -moz-osx-font-smoothing: grayscale;
+       }
+       #backToTop {
+           z-index: 50;
+       }
+        /* Custom Scrollbar Styles (WebKit) */
+        ::-webkit-scrollbar {
+          width: 10px;
+          height: 10px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #e2e8f0; /* Corresponds to 'scrollbar-track' or Tailwind's slate-200 */
+          border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #2563eb; /* Corresponds to 'scrollbar-thumb' or Tailwind's primary */
+          border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: #1d4ed8; /* Corresponds to 'scrollbar-thumb-hover' or Tailwind's primary-dark */
+        }
+
+        /* For Firefox (limited customization) */
+        html {
+            scrollbar-width: thin; /* "auto" or "thin" */
+            scrollbar-color: #2563eb #e2e8f0; /* thumb track */
+        }
+   </style>
+</head>
+<body class="bg-light-bg text-text-main font-sans antialiased">
+   <div class="min-h-screen flex flex-col">
+
+       <!-- Header -->
+       <header id="main-header" class="bg-primary text-text-on-primary shadow-lg">
+           <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 md:py-16">
+               <div class="md:flex md:items-center md:gap-6 lg:gap-10">
+                   <div class="flex-shrink-0 text-center md:text-left mb-6 md:mb-0">
+                       <img id="profile-image" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full border-4 object-cover mx-auto shadow-custom-md border-[rgba(255,255,255,0.3)]" src="assets/images/profile_placeholder.png" alt="Photo de profil de Hamadou Tshongany" />
+                   </div>
+                   <div class="text-center md:text-left flex-grow">
+                       <h1 id="profile-name" class="text-3xl xs:text-4xl sm:text-5xl font-extrabold mb-1 tracking-tight text-text-on-primary">Hamadou Tshongany</h1>
+                       <p id="profile-title" class="text-lg xs:text-xl md:text-2xl mb-3 sm:mb-4 text-blue-100">Mon Parcours Professionnel</p>
+                       <p id="profile-bio" class="text-sm sm:text-base max-w-2xl mx-auto md:mx-0 leading-relaxed text-blue-200">Découvrez mon évolution professionnelle et éducative à travers mes expériences et formations clés.</p>
+                       <ul id="header-social-links" class="flex flex-wrap justify-center md:justify-start gap-x-4 sm:gap-x-5 gap-y-2 my-4 sm:my-5">
+                           <li><a href="mailto:sirehtshongany@gmail.com" class="text-blue-50 hover:text-white transition-colors duration-200 flex items-center gap-1.5 text-xs sm:text-sm"><i class="fas fa-envelope fa-fw" aria-hidden="true"></i> Email</a></li>
+                           <li><a href="https://github.com/htshongany" target="_blank" rel="noopener noreferrer" class="text-blue-50 hover:text-white transition-colors duration-200 flex items-center gap-1.5 text-xs sm:text-sm"><i class="fab fa-github fa-fw" aria-hidden="true"></i> GitHub</a></li>
+                           <li><a href="https://www.linkedin.com/in/hamadou-tshongany-ba8678168" target="_blank" rel="noopener noreferrer" class="text-blue-50 hover:text-white transition-colors duration-200 flex items-center gap-1.5 text-xs sm:text-sm"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i> LinkedIn</a></li>
+                           <li><a href="https://twitter.com/tshongany" target="_blank" rel="noopener noreferrer" class="text-blue-50 hover:text-white transition-colors duration-200 flex items-center gap-1.5 text-xs sm:text-sm"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i> Twitter</a></li>
+                       </ul>
+                       <div class="mt-4">
+                           <a href="index.html" class="inline-flex items-center px-4 py-2 bg-white hover:bg-slate-100 text-primary rounded-lg transition-colors duration-200 shadow-md text-sm font-medium focus-visible:outline-primary focus-visible:outline-offset-2">
+                               <i class="fas fa-arrow-left mr-2" aria-hidden="true"></i> Retour au Portfolio
+                           </a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </header>
+
+       <!-- Main Content -->
+       <main class="flex-grow py-12 lg:py-16">
+           <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+               <div class="relative">
+                   <div class="absolute left-4 lg:left-1/2 lg:transform lg:-translate-x-px h-full w-0.5 bg-gradient-to-b from-primary via-primary to-transparent"></div>
+
+                   <div class="space-y-12 lg:space-y-16">
+
+                       <div class="relative flex items-center lg:justify-end">
+                           <div class="lg:w-1/2 lg:pr-12 lg:pl-8">
+                               <div class="bg-white rounded-xl shadow-custom-light hover:shadow-custom-md transition-all duration-300 p-6 ml-12 lg:ml-0 group hover:scale-[1.02]">
+                                   <div class="flex items-start gap-4">
+                                       <div class="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center group-hover:bg-primary-dark transition-colors duration-300">
+                                           <i class="fas fa-cloud text-white text-lg"></i>
+                                       </div>
+                                       <div class="flex-grow">
+                                           <div class="flex items-center gap-2 mb-2">
+                                               <span class="px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">2024</span>
+                                           </div>
+                                           <h3 class="text-xl font-bold text-text-main mb-1">AWS re/Start</h3>
+                                           <p class="text-text-muted font-medium mb-3">Amazon Web Services</p>
+                                           <p class="text-sm text-text-muted leading-relaxed">Diplômé du programme AWS re/Start, axé sur les compétences cloud et la préparation à la certification AWS Certified Cloud Practitioner.</p>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="absolute left-4 lg:left-1/2 lg:transform lg:-translate-x-1/2 w-4 h-4 bg-primary border-4 border-white rounded-full shadow-md z-10"></div>
+                       </div>
+
+                       <div class="relative flex items-center lg:justify-start">
+                           <div class="lg:w-1/2 lg:pl-12 lg:pr-8">
+                               <div class="bg-white rounded-xl shadow-custom-light hover:shadow-custom-md transition-all duration-300 p-6 ml-12 lg:ml-0 group hover:scale-[1.02]">
+                                   <div class="flex items-start gap-4">
+                                       <div class="flex-shrink-0 w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center group-hover:bg-indigo-600 transition-colors duration-300">
+                                           <i class="fas fa-user-graduate text-white text-lg"></i>
+                                       </div>
+                                       <div class="flex-grow">
+                                           <div class="flex items-center gap-2 mb-2">
+                                               <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">2023</span>
+                                           </div>
+                                           <h3 class="text-xl font-bold text-text-main mb-1">Licence en Conception de Systèmes Informatiques</h3>
+                                           <p class="text-text-muted font-medium mb-3">Université Pédagogique Nationale (UPN)</p>
+                                           <p class="text-sm text-text-muted leading-relaxed">Formation complète en conception, développement et gestion de systèmes informatiques.</p>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="absolute left-4 lg:left-1/2 lg:transform lg:-translate-x-1/2 w-4 h-4 bg-indigo-500 border-4 border-white rounded-full shadow-md z-10"></div>
+                       </div>
+
+                       <div class="relative flex items-center lg:justify-end">
+                           <div class="lg:w-1/2 lg:pr-12 lg:pl-8">
+                               <div class="bg-white rounded-xl shadow-custom-light hover:shadow-custom-md transition-all duration-300 p-6 ml-12 lg:ml-0 group hover:scale-[1.02]">
+                                   <div class="flex items-start gap-4">
+                                       <div class="flex-shrink-0 w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center group-hover:bg-red-600 transition-colors duration-300">
+                                           <i class="fas fa-seedling text-white text-lg"></i>
+                                       </div>
+                                       <div class="flex-grow">
+                                           <div class="flex items-center gap-2 mb-2">
+                                               <span class="px-2 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">2023</span>
+                                           </div>
+                                           <h3 class="text-xl font-bold text-text-main mb-1">Seeds for the Future</h3>
+                                           <p class="text-text-muted font-medium mb-3">Huawei</p>
+                                           <p class="text-sm text-text-muted leading-relaxed">Programme intensif sur les technologies émergentes (5G, IA, Cloud Computing) et la culture d'entreprise.</p>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="absolute left-4 lg:left-1/2 lg:transform lg:-translate-x-1/2 w-4 h-4 bg-red-500 border-4 border-white rounded-full shadow-md z-10"></div>
+                       </div>
+
+                       <div class="relative flex items-center lg:justify-start">
+                           <div class="lg:w-1/2 lg:pl-12 lg:pr-8">
+                               <div class="bg-white rounded-xl shadow-custom-light hover:shadow-custom-md transition-all duration-300 p-6 ml-12 lg:ml-0 group hover:scale-[1.02]">
+                                   <div class="flex items-start gap-4">
+                                       <div class="flex-shrink-0 w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center group-hover:bg-slate-800 transition-colors duration-300">
+                                           <i class="fab fa-linux text-white text-lg"></i>
+                                       </div>
+                                       <div class="flex-grow">
+                                           <div class="flex items-center gap-2 mb-2">
+                                               <span class="px-2 py-1 bg-slate-100 text-slate-800 text-xs font-medium rounded-full">2022</span>
+                                           </div>
+                                           <h3 class="text-xl font-bold text-text-main mb-1">NDG Linux Unhatched</h3>
+                                           <p class="text-text-muted font-medium mb-3">Cisco Networking Academy</p>
+                                           <p class="text-sm text-text-muted leading-relaxed">Introduction aux commandes de base Linux, à la navigation dans le système de fichiers et aux concepts clés de l'administration Linux.</p>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="absolute left-4 lg:left-1/2 lg:transform lg:-translate-x-1/2 w-4 h-4 bg-slate-700 border-4 border-white rounded-full shadow-md z-10"></div>
+                       </div>
+
+                       <div class="relative flex items-center lg:justify-end">
+                           <div class="lg:w-1/2 lg:pr-12 lg:pl-8">
+                               <div class="bg-white rounded-xl shadow-custom-light hover:shadow-custom-md transition-all duration-300 p-6 ml-12 lg:ml-0 group hover:scale-[1.02]">
+                                   <div class="flex items-start gap-4">
+                                       <div class="flex-shrink-0 w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center group-hover:bg-purple-600 transition-colors duration-300">
+                                           <i class="fas fa-graduation-cap text-white text-lg"></i>
+                                       </div>
+                                       <div class="flex-grow">
+                                           <div class="flex items-center gap-2 mb-2">
+                                               <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs font-medium rounded-full">2020 - 2021</span>
+                                           </div>
+                                           <h3 class="text-xl font-bold text-text-main mb-1">Diplôme de Graduat en Math Info</h3>
+                                           <p class="text-text-muted font-medium mb-3">Université Pédagogique Nationale (UPN)</p>
+                                           <p class="text-sm text-text-muted leading-relaxed">Formation universitaire initiale.</p>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="absolute left-4 lg:left-1/2 lg:transform lg:-translate-x-1/2 w-4 h-4 bg-purple-500 border-4 border-white rounded-full shadow-md z-10"></div>
+                       </div>
+
+                       <div class="relative flex items-center lg:justify-start">
+                           <div class="lg:w-1/2 lg:pl-12 lg:pr-8">
+                               <div class="bg-white rounded-xl shadow-custom-light hover:shadow-custom-md transition-all duration-300 p-6 ml-12 lg:ml-0 group hover:scale-[1.02]">
+                                   <div class="flex items-start gap-4">
+                                       <div class="flex-shrink-0 w-12 h-12 bg-emerald-500 rounded-lg flex items-center justify-center group-hover:bg-emerald-600 transition-colors duration-300">
+                                           <i class="fas fa-school text-white text-lg"></i>
+                                       </div>
+                                       <div class="flex-grow">
+                                           <div class="flex items-center gap-2 mb-2">
+                                               <span class="px-2 py-1 bg-emerald-100 text-emerald-800 text-xs font-medium rounded-full">2017 - 2018</span>
+                                           </div>
+                                           <h3 class="text-xl font-bold text-text-main mb-1">Diplôme d'État (Baccalauréat)</h3>
+                                           <p class="text-text-muted font-medium mb-3">MSAADA</p>
+                                           <p class="text-sm text-text-muted leading-relaxed">Fin des études secondaires.</p>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="absolute left-4 lg:left-1/2 lg:transform lg:-translate-x-1/2 w-4 h-4 bg-emerald-500 border-4 border-white rounded-full shadow-md z-10"></div>
+                       </div>
+
+                       <div class="relative flex items-center lg:justify-end">
+                           <div class="lg:w-1/2 lg:pr-12 lg:pl-8">
+                               <div class="bg-white rounded-xl shadow-custom-light hover:shadow-custom-md transition-all duration-300 p-6 ml-12 lg:ml-0 group hover:scale-[1.02] border-l-4 border-cyan-custom">
+                                   <div class="flex items-start gap-4">
+                                       <div class="flex-shrink-0 w-12 h-12 bg-cyan-custom rounded-lg flex items-center justify-center group-hover:bg-cyan-custom-light transition-colors duration-300">
+                                           <i class="fas fa-chalkboard-teacher text-white text-lg"></i>
+                                       </div>
+                                       <div class="flex-grow">
+                                           <div class="flex items-center gap-2 mb-2">
+                                               <span class="px-2 py-1 bg-cyan-custom-bg text-cyan-custom-light text-xs font-medium rounded-full">Stage</span>
+                                           </div>
+                                           <h3 class="text-xl font-bold text-text-main mb-1">Enseignant de Mathématiques (Stage)</h3>
+                                           <p class="text-text-muted font-medium mb-3"><a href="https://www.facebook.com/p/Institut-R%C3%A9v%C3%A9rend-Samba-100082942614286/" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">Institut Révérend Samba</a></p>
+                                           <ul class="text-sm text-text-muted space-y-1">
+                                               <li class="flex items-start gap-2">
+                                                   <i class="fas fa-check-circle text-green-500 mt-0.5 flex-shrink-0"></i>
+                                                   <span>Dispensation de cours de mathématiques aux élèves.</span>
+                                               </li>
+                                               <li class="flex items-start gap-2">
+                                                   <i class="fas fa-check-circle text-green-500 mt-0.5 flex-shrink-0"></i>
+                                                   <span>Préparation de matériel pédagogique et participation à l'évaluation des élèves.</span>
+                                               </li>
+                                           </ul>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="absolute left-4 lg:left-1/2 lg:transform lg:-translate-x-1/2 w-4 h-4 bg-cyan-custom border-4 border-white rounded-full shadow-md z-10"></div>
+                       </div>
+
+                       <div class="relative flex items-center lg:justify-start">
+                           <div class="lg:w-1/2 lg:pl-12 lg:pr-8">
+                               <div class="bg-white rounded-xl shadow-custom-light hover:shadow-custom-md transition-all duration-300 p-6 ml-12 lg:ml-0 group hover:scale-[1.02] border-l-4 border-orange-400">
+                                   <div class="flex items-start gap-4">
+                                       <div class="flex-shrink-0 w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center group-hover:bg-orange-600 transition-colors duration-300">
+                                           <i class="fas fa-briefcase text-white text-lg"></i>
+                                       </div>
+                                       <div class="flex-grow">
+                                           <div class="flex items-center gap-2 mb-2">
+                                               <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs font-medium rounded-full">Expérience</span>
+                                           </div>
+                                           <h3 class="text-xl font-bold text-text-main mb-1">Webmaster</h3>
+                                           <p class="text-text-muted font-medium mb-3">Brown Construction & Design</p>
+                                           <ul class="text-sm text-text-muted space-y-1">
+                                               <li class="flex items-start gap-2">
+                                                   <i class="fas fa-check-circle text-green-500 mt-0.5 flex-shrink-0"></i>
+                                                   <span>Gestion de sites web, déploiement et maintenance</span>
+                                               </li>
+                                               <li class="flex items-start gap-2">
+                                                   <i class="fas fa-check-circle text-green-500 mt-0.5 flex-shrink-0"></i>
+                                                   <span>Environnements de production en développement web</span>
+                                               </li>
+                                           </ul>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="absolute left-4 lg:left-1/2 lg:transform lg:-translate-x-1/2 w-4 h-4 bg-orange-500 border-4 border-white rounded-full shadow-md z-10"></div>
+                       </div>
+
+                       <div class="relative flex items-center lg:justify-end">
+                           <div class="lg:w-1/2 lg:pr-12 lg:pl-8">
+                               <div class="bg-white rounded-xl shadow-custom-light hover:shadow-custom-md transition-all duration-300 p-6 ml-12 lg:ml-0 group hover:scale-[1.02] border-l-4 border-teal-400">
+                                   <div class="flex items-start gap-4">
+                                       <div class="flex-shrink-0 w-12 h-12 bg-teal-500 rounded-lg flex items-center justify-center group-hover:bg-teal-600 transition-colors duration-300">
+                                           <i class="fas fa-briefcase text-white text-lg"></i>
+                                       </div>
+                                       <div class="flex-grow">
+                                           <div class="flex items-center gap-2 mb-2">
+                                               <span class="px-2 py-1 bg-teal-100 text-teal-800 text-xs font-medium rounded-full">Stage</span>
+                                           </div>
+                                           <h3 class="text-xl font-bold text-text-main mb-1">Stage</h3>
+                                           <p class="text-text-muted font-medium mb-3">CNSS (Caisse Nationale de Sécurité Sociale)</p>
+                                           <ul class="text-sm text-text-muted space-y-1">
+                                               <li class="flex items-start gap-2">
+                                                   <i class="fas fa-check-circle text-green-500 mt-0.5 flex-shrink-0"></i>
+                                                   <span>Système de sécurité sociale, lois et règlements</span>
+                                               </li>
+                                               <li class="flex items-start gap-2">
+                                                   <i class="fas fa-check-circle text-green-500 mt-0.5 flex-shrink-0"></i>
+                                                   <span>Gestion des dossiers et calcul des prestations</span>
+                                               </li>
+                                           </ul>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="absolute left-4 lg:left-1/2 lg:transform lg:-translate-x-1/2 w-4 h-4 bg-teal-500 border-4 border-white rounded-full shadow-md z-10"></div>
+                       </div>
+
+                   </div>
+               </div>
+           </div>
+       </main>
+
+       <!-- Footer -->
+       <footer id="main-footer" class="bg-footer-bg text-footer-text border-t border-footer-link-hover-bg mt-auto">
+           <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+               <h2 id="footer-contact-title" class="text-2xl sm:text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3 text-text-on-dark-bg">
+                   <span class="w-9 h-9 inline-flex items-center justify-center rounded-lg flex-shrink-0 text-white bg-primary"><i class="fas fa-link text-sm" aria-hidden="true"></i></span>
+                   <span>Contact & Réseaux</span>
+               </h2>
+               <div id="footer-social-links" class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                   <a href="mailto:sirehtshongany@gmail.com" class="flex items-center p-3 sm:p-4 rounded-lg bg-footer-link-hover-bg hover:bg-opacity-80 transition-all duration-200 group transform hover:scale-105 focus:scale-105 focus-visible:outline-primary focus-visible:outline-offset-1">
+                       <div class="text-white p-2 sm:p-2.5 rounded-lg mr-3 shadow-md group-hover:shadow-lg transition-shadow duration-200 flex-shrink-0 bg-red-500">
+                           <i class="fas fa-envelope fa-fw text-base" aria-hidden="true"></i>
+                       </div>
+                       <div class="min-w-0 flex-1">
+                           <div class="font-semibold text-sm text-text-on-dark-bg">Email</div>
+                           <div class="text-xs text-slate-400 group-hover:text-slate-200 transition-colors truncate">Me contacter</div>
+                       </div>
+                   </a>
+                   <a href="https://github.com/htshongany" target="_blank" rel="noopener noreferrer" class="flex items-center p-3 sm:p-4 rounded-lg bg-footer-link-hover-bg hover:bg-opacity-80 transition-all duration-200 group transform hover:scale-105 focus:scale-105 focus-visible:outline-primary focus-visible:outline-offset-1">
+                       <div class="text-white p-2 sm:p-2.5 rounded-lg mr-3 shadow-md group-hover:shadow-lg transition-shadow duration-200 flex-shrink-0 bg-slate-900">
+                           <i class="fab fa-github fa-fw text-base" aria-hidden="true"></i>
+                       </div>
+                       <div class="min-w-0 flex-1">
+                           <div class="font-semibold text-sm text-text-on-dark-bg">GitHub</div>
+                           <div class="text-xs text-slate-400 group-hover:text-slate-200 transition-colors truncate">htshongany</div>
+                       </div>
+                   </a>
+                   <a href="https://www.linkedin.com/in/hamadou-tshongany-ba8678168" target="_blank" rel="noopener noreferrer" class="flex items-center p-3 sm:p-4 rounded-lg bg-footer-link-hover-bg hover:bg-opacity-80 transition-all duration-200 group transform hover:scale-105 focus:scale-105 focus-visible:outline-primary focus-visible:outline-offset-1">
+                       <div class="text-white p-2 sm:p-2.5 rounded-lg mr-3 shadow-md group-hover:shadow-lg transition-shadow duration-200 flex-shrink-0 bg-blue-600">
+                           <i class="fab fa-linkedin fa-fw text-base" aria-hidden="true"></i>
+                       </div>
+                       <div class="min-w-0 flex-1">
+                           <div class="font-semibold text-sm text-text-on-dark-bg">LinkedIn</div>
+                           <div class="text-xs text-slate-400 group-hover:text-slate-200 transition-colors truncate">Hamadou Tshongany</div>
+                       </div>
+                   </a>
+                   <a href="https://twitter.com/tshongany" target="_blank" rel="noopener noreferrer" class="flex items-center p-3 sm:p-4 rounded-lg bg-footer-link-hover-bg hover:bg-opacity-80 transition-all duration-200 group transform hover:scale-105 focus:scale-105 focus-visible:outline-primary focus-visible:outline-offset-1">
+                       <div class="text-white p-2 sm:p-2.5 rounded-lg mr-3 shadow-md group-hover:shadow-lg transition-shadow duration-200 flex-shrink-0 bg-sky-500">
+                           <i class="fab fa-twitter fa-fw text-base" aria-hidden="true"></i>
+                       </div>
+                       <div class="min-w-0 flex-1">
+                           <div class="font-semibold text-sm text-text-on-dark-bg">Twitter</div>
+                           <div class="text-xs text-slate-400 group-hover:text-slate-200 transition-colors truncate">@tshongany</div>
+                       </div>
+                   </a>
+               </div>
+               <div class="text-center mt-10 pt-6 border-t border-footer-link-hover-bg">
+                   <p class="text-sm">© <span id="currentYear"></span> Hamadou Tshongany <span class="mx-2">•</span>
+                       <a id="license-link" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license noopener" class="hover:text-primary transition-colors focus-visible:outline-primary focus-visible:outline-offset-1">
+                           <i class="fab fa-creative-commons" aria-label="Creative Commons"></i><i class="fab fa-creative-commons-by" aria-label="Attribution"></i><i class="fab fa-creative-commons-sa" aria-label="Share Alike"></i> Ce travail est sous licence CC BY-SA 4.0
+                       </a>
+                   </p>
+               </div>
+           </div>
+       </footer>
+   </div>
+
+   <button id="backToTop" aria-label="Retour en haut de page" class="fixed bottom-4 right-4 bg-primary hover:bg-primary-dark text-white w-10 h-10 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 invisible focus-visible:outline-primary focus-visible:outline-offset-1">
+       <i class="fas fa-arrow-up" aria-hidden="true"></i>
+   </button>
+
+   <script>
+       document.addEventListener('DOMContentLoaded', () => {
+           const currentYearEl = document.getElementById('currentYear');
+           if (currentYearEl) {
+               currentYearEl.textContent = new Date().getFullYear();
+           }
+
+           const backToTopButton = document.getElementById('backToTop');
+           if (backToTopButton) {
+               const toggleBackToTopButton = () => {
+                   if (window.pageYOffset > 300) {
+                       backToTopButton.classList.remove('opacity-0', 'invisible');
+                       backToTopButton.classList.add('opacity-100', 'visible');
+                   } else {
+                       backToTopButton.classList.remove('opacity-100', 'visible');
+                       backToTopButton.classList.add('opacity-0', 'invisible');
+                   }
+               };
+               window.addEventListener('scroll', toggleBackToTopButton);
+               backToTopButton.addEventListener('click', () => {
+                   window.scrollTo({ top: 0, behavior: 'smooth' });
+               });
+               toggleBackToTopButton(); // Initial check
+           }
+       });
+   </script>
+</body>
+</html>

@@ -1,112 +1,463 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site en Construction</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Optionnel: pour une police personnalisée si besoin */
-        /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap'); */
-        /* body { font-family: 'Poppins', sans-serif; } */
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- USER_DATA_START:SEO_METADATA -->
+  <title>Hamadou Tshongany - Développeur Python Professionnel</title>
+  <meta name="description" content="Portfolio de Hamadou Tshongany, Développeur Python spécialisé dans l'open source, l'automatisation et la création de solutions logicielles. Découvrez mes projets, compétences et bibliothèques.">
+  <meta name="author" content="Hamadou Tshongany">
+  <meta name="keywords" content="Hamadou Tshongany, Développeur Python, Portfolio, Flask, Django, Open Source, Automatisation, Flask-gen, Développement Web">
+  <!-- USER_DATA_END:SEO_METADATA -->
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://htshongany.github.io/">
+  <!-- USER_DATA_START:OG_PROFILE -->
+  <meta property="og:title" content="Hamadou Tshongany - Développeur Python Professionnel">
+  <meta property="og:description" content="Portfolio de Hamadou Tshongany, Développeur Python spécialisé dans l'open source et l'automatisation.">
+  <meta property="og:image" content="assets/images/profile_placeholder.png">
+  <!-- USER_DATA_END:OG_PROFILE -->
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://htshongany.github.io/">
+  <!-- USER_DATA_START:TWITTER_PROFILE -->
+  <meta property="twitter:title" content="Hamadou Tshongany - Développeur Python Professionnel">
+  <meta property="twitter:description" content="Portfolio de Hamadou Tshongany, Développeur Python spécialisé dans l'open source et l'automatisation.">
+  <meta property="twitter:image" content="assets/images/profile_placeholder.png">
+  <!-- USER_DATA_END:TWITTER_PROFILE -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- USER_DATA_START:FAVICON -->
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <!-- USER_DATA_END:FAVICON -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Configuration Tailwind
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            // USER_DATA_START:THEME_COLORS
+            primary: '#2563eb',
+            'primary-dark': '#1d4ed8',
+            secondary: '#64748b',
+            'light-bg': '#f8fafc',
+            'card-bg': '#ffffff',
+            'text-main': '#1f293b',
+            'text-muted': '#64748b',
+            'text-on-primary': '#ffffff',
+            'text-on-dark-bg': '#e2e8f0',
+            'icon-bg-python': '#3b82f6',
+            'icon-bg-projects': '#8b5cf6',
+            'icon-bg-badges': '#f59e0b',
+            'icon-bg-skills': '#10b981',
+            'pagination-btn-bg': '#10b981',
+            'pagination-btn-hover-bg': '#059669',
+            'footer-bg': '#1e293b',
+            'footer-text': '#94a3b8',
+            'footer-link-hover-bg': '#334155',
+            // Couleurs spécifiques pour les projets
+            'project-icon-green': '#22c55e',
+            'project-icon-slate': '#1e293b',
+            'project-icon-sky': '#0ea5e9',
+            'project-icon-rose': '#f43f5e',
+            // Couleurs spécifiques pour les compétences
+            'skill-python': '#3b82f6',
+            'skill-c': '#64748b',
+            'skill-js': '#facc15',
+            'skill-flask': '#22c55e',
+            'skill-django': '#f97316',
+            'skill-git': '#a855f7',
+            'skill-api': '#0ea5e9',
+            // Couleurs pour boutons spécifiques plateformes
+            'github-btn-bg': '#24292e',
+            'github-btn-text': '#ffffff',
+            'github-btn-hover-bg': '#383f45',
+            'pypi-btn-bg': '#ffd343',
+            'pypi-btn-text': '#3775a9',
+            'pypi-btn-hover-bg': '#ffda66',
+            // Couleurs pour la scrollbar
+            'scrollbar-track': '#e2e8f0', // slate-200
+            'scrollbar-thumb': '#2563eb', // primary
+            'scrollbar-thumb-hover': '#1d4ed8' // primary-dark
+            // USER_DATA_END:THEME_COLORS
+          },
+          boxShadow: {
+            'custom-light': '0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.07)',
+            'custom-md': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)',
+          },
+          screens: {
+            'xs': '475px',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    /* Styles spécifiques pour Credly (difficiles à surcharger sans !important) */
+    .credly-badge-container > div { max-width: 100% !important; max-height: 100% !important; }
+    .credly-badge-container iframe { max-width: 100% !important; max-height: 100% !important; }
+
+    /* Custom Scrollbar Styles (WebKit) */
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #e2e8f0; /* Corresponds to 'scrollbar-track' or Tailwind's slate-200 */
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2563eb; /* Corresponds to 'scrollbar-thumb' or Tailwind's primary */
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #1d4ed8; /* Corresponds to 'scrollbar-thumb-hover' or Tailwind's primary-dark */
+    }
+
+    /* For Firefox (limited customization) */
+    html {
+        scrollbar-width: thin; /* "auto" or "thin" */
+        scrollbar-color: #2563eb #e2e8f0; /* thumb track */
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-4 font-sans">
+<body class="bg-light-bg text-text-main font-sans antialiased">
+  <div class="min-h-screen flex flex-col">
 
-    <div class="bg-gray-800 p-4 sm:p-6 md:p-8 rounded-xl shadow-2xl text-center max-w-3xl w-full">
-        
-        <div class="mb-4 sm:mb-6 md:mb-8">
-            <svg class="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 text-yellow-400 mx-auto animate-bounce" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
-            </svg>
+    <!-- Header -->
+    <header id="main-header" class="bg-primary text-text-on-primary shadow-lg">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 md:py-16">
+        <div class="md:flex md:items-center md:gap-6 lg:gap-10">
+          <div class="flex-shrink-0 text-center md:text-left mb-6 md:mb-0">
+            <img id="profile-image" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full border-4 object-cover mx-auto shadow-custom-md border-[rgba(255,255,255,0.3)]" src="assets/images/profile_placeholder.png" alt="Photo de profil de Hamadou Tshongany" />
+          </div>
+          <div class="text-center md:text-left flex-grow">
+            <h1 id="profile-name" class="text-3xl xs:text-4xl sm:text-5xl font-extrabold mb-1 tracking-tight text-text-on-primary">Hamadou Tshongany</h1>
+            <p id="profile-title" class="text-lg xs:text-xl md:text-2xl mb-3 sm:mb-4 text-blue-100">Développeur Python Professionnel</p>
+            <p id="profile-bio" class="text-sm sm:text-base max-w-2xl mx-auto md:mx-0 leading-relaxed text-blue-200">Passionné par l'open source, l'automatisation et la création de solutions logicielles élégantes. Créateur de la bibliothèque Flask-gen et contributeur actif à la communauté.</p>
+            <ul id="header-social-links" class="flex flex-wrap justify-center md:justify-start gap-x-4 sm:gap-x-5 gap-y-2 my-4 sm:my-5">
+              <li><a href="mailto:sirehtshongany@gmail.com" class="text-blue-50 hover:text-white transition-colors duration-200 flex items-center gap-1.5 text-xs sm:text-sm"><i class="fas fa-envelope fa-fw" aria-hidden="true"></i> Email</a></li>
+              <li><a href="https://github.com/htshongany" target="_blank" rel="noopener noreferrer" class="text-blue-50 hover:text-white transition-colors duration-200 flex items-center gap-1.5 text-xs sm:text-sm"><i class="fab fa-github fa-fw" aria-hidden="true"></i> GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/hamadou-tshongany-ba8678168" target="_blank" rel="noopener noreferrer" class="text-blue-50 hover:text-white transition-colors duration-200 flex items-center gap-1.5 text-xs sm:text-sm"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i> LinkedIn</a></li>
+              <li><a href="https://twitter.com/tshongany" target="_blank" rel="noopener noreferrer" class="text-blue-50 hover:text-white transition-colors duration-200 flex items-center gap-1.5 text-xs sm:text-sm"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i> Twitter</a></li>
+            </ul>
+            <div class="mt-4">
+              <a href="/about.html" class="inline-flex items-center px-4 py-2 bg-white hover:bg-slate-100 text-primary rounded-lg transition-colors duration-200 shadow-md text-sm font-medium focus-visible:outline-primary focus-visible:outline-offset-2">
+                <i class="fas fa-user mr-2" aria-hidden="true"></i> En savoir plus
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Layout principal -->
+    <main id="main-content-area" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 flex-grow">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
+        <div class="lg:col-span-2 space-y-10 sm:space-y-12 md:space-y-16">
+
+          <!-- Badges Section -->
+          <section id="badges-section" aria-labelledby="badges-title-text" class="bg-card-bg rounded-xl shadow-custom-md p-5 sm:p-6 md:p-8">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 flex items-center gap-3 text-text-main">
+              <span class="w-8 h-8 sm:w-9 sm:h-9 inline-flex items-center justify-center rounded-lg flex-shrink-0 text-white bg-icon-bg-badges"><i class="fas fa-award text-base" aria-hidden="true"></i></span>
+              <span id="badges-title-text">Badges et Certifications</span>
+            </h2>
+            <div class="relative mb-6">
+              <div id="badges-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+                <!-- USER_DATA_START:BADGES_LIST -->
+                <div class="pagination-item credly-badge-container flex items-center justify-center overflow-hidden bg-slate-100 rounded-lg w-full h-[180px] sm:h-[190px] md:h-[200px] shadow-custom-light hover:shadow-custom-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                  <div data-iframe-width="150" data-iframe-height="170" data-share-badge-id="242aff9c-588e-480d-abb7-defd70db0204" data-share-badge-host="https://www.credly.com"><p class="text-slate-500 text-xs p-2 text-center">Chargement badge...</p></div>
+                </div>
+                <div class="pagination-item credly-badge-container flex items-center justify-center overflow-hidden bg-slate-100 rounded-lg w-full h-[180px] sm:h-[190px] md:h-[200px] shadow-custom-light hover:shadow-custom-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                  <div data-iframe-width="150" data-iframe-height="170" data-share-badge-id="c1ec8ce9-5764-4467-9178-66d29b638906" data-share-badge-host="https://www.credly.com"><p class="text-slate-500 text-xs p-2 text-center">Chargement badge...</p></div>
+                </div>
+                <div class="pagination-item credly-badge-container flex items-center justify-center overflow-hidden bg-slate-100 rounded-lg w-full h-[180px] sm:h-[190px] md:h-[200px] shadow-custom-light hover:shadow-custom-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                   <div data-iframe-width="150" data-iframe-height="170" data-share-badge-id="eb4d011a-47e7-4580-bc38-c882da57a48f" data-share-badge-host="https://www.credly.com"><p class="text-slate-500 text-xs p-2 text-center">Chargement badge...</p></div>
+                </div>
+                <!-- USER_DATA_END:BADGES_LIST -->
+              </div>
+              <button id="badges-prev" aria-label="Badge précédent" class="hidden absolute top-1/2 -translate-y-1/2 left-0 transform -translate-x-[calc(50%+0.25rem)] sm:-translate-x-[calc(100%+0.25rem)] bg-pagination-btn-bg hover:bg-pagination-btn-hover-bg text-white p-2 rounded-full w-9 h-9 flex items-center justify-center shadow-md z-10 focus-visible:outline-primary focus-visible:outline-offset-1"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+              <button id="badges-next" aria-label="Badge suivant" class="hidden absolute top-1/2 -translate-y-1/2 right-0 transform translate-x-[calc(50%+0.25rem)] sm:translate-x-[calc(100%+0.25rem)] bg-pagination-btn-bg hover:bg-pagination-btn-hover-bg text-white p-2 rounded-full w-9 h-9 flex items-center justify-center shadow-md z-10 focus-visible:outline-primary focus-visible:outline-offset-1"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+            </div>
+            <p id="badges-note" class="text-center text-xs mt-4 px-4 text-text-muted">Note: Les badges sont chargés via un script externe. Leur affichage peut varier.</p>
+          </section>
+          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+          <!-- Mes bibliothèques Section -->
+          <section id="libraries-section" aria-labelledby="libraries-title-text" class="bg-card-bg rounded-xl shadow-custom-md p-5 sm:p-6 md:p-8">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 flex items-center gap-3 text-text-main">
+              <span class="w-8 h-8 sm:w-9 sm:h-9 inline-flex items-center justify-center rounded-lg flex-shrink-0 text-white bg-icon-bg-python"><i class="fab fa-python text-base" aria-hidden="true"></i></span>
+              <span id="libraries-title-text">Mes bibliothèques</span>
+            </h2>
+            <div class="relative mb-6">
+              <div id="libraries-grid" class="grid grid-cols-1 gap-6 sm:gap-8">
+                <!-- USER_DATA_START:LIBRARIES_LIST -->
+                <div class="pagination-item border border-secondary rounded-xl p-5 sm:p-6 bg-gradient-to-br from-slate-50 to-blue-50 hover:shadow-lg transition-shadow duration-300">
+                  <div class="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-4 md:space-x-6">
+                    <div class="p-3 sm:p-4 rounded-lg shadow-md flex-shrink-0 self-center sm:self-start bg-primary text-text-on-primary"><i class="fas fa-box-open text-2xl sm:text-3xl" aria-hidden="true"></i></div>
+                    <div class="flex-1 text-center sm:text-left">
+                      <h3 class="text-xl sm:text-2xl font-bold mb-2 text-text-main">Flask-gen</h3>
+                      <p class="mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed text-text-muted">Un générateur en ligne de commande pour initialiser rapidement la structure de vos projets Flask, incluant les configurations de base, blueprints, et plus encore.</p>
+                      <div class="flex flex-wrap justify-center sm:justify-start gap-3">
+                        <a href="https://github.com/htshongany/Flask-gen" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded-md bg-github-btn-bg text-github-btn-text hover:bg-github-btn-hover-bg transition-colors duration-200 text-xs sm:text-sm font-medium shadow-sm focus-visible:outline-primary focus-visible:outline-offset-2">
+                          <i class="fab fa-github mr-1.5" aria-hidden="true"></i>GitHub
+                        </a>
+                        <a href="https://pypi.org/project/flask-gen/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded-md bg-pypi-btn-bg text-pypi-btn-text hover:bg-pypi-btn-hover-bg transition-colors duration-200 text-xs sm:text-sm font-medium shadow-sm focus-visible:outline-primary focus-visible:outline-offset-2">
+                          <i class="fas fa-cube mr-1.5" aria-hidden="true"></i>PyPI
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- USER_DATA_END:LIBRARIES_LIST -->
+              </div>
+              <button id="libraries-prev" aria-label="Bibliothèque précédente" class="hidden absolute top-1/2 -translate-y-1/2 left-0 transform -translate-x-[calc(50%+0.25rem)] sm:-translate-x-[calc(100%+0.25rem)] bg-pagination-btn-bg hover:bg-pagination-btn-hover-bg text-white p-2 rounded-full w-9 h-9 flex items-center justify-center shadow-md z-10 focus-visible:outline-primary focus-visible:outline-offset-1"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+              <button id="libraries-next" aria-label="Bibliothèque suivante" class="hidden absolute top-1/2 -translate-y-1/2 right-0 transform translate-x-[calc(50%+0.25rem)] sm:translate-x-[calc(100%+0.25rem)] bg-pagination-btn-bg hover:bg-pagination-btn-hover-bg text-white p-2 rounded-full w-9 h-9 flex items-center justify-center shadow-md z-10 focus-visible:outline-primary focus-visible:outline-offset-1"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+            </div>
+          </section>
+
+          <!-- Projects Section -->
+          <section id="projects-section" aria-labelledby="projects-title-text" class="bg-card-bg rounded-xl shadow-custom-md p-5 sm:p-6 md:p-8">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 flex items-center gap-3 text-text-main">
+              <span class="w-8 h-8 sm:w-9 sm:h-9 inline-flex items-center justify-center rounded-lg flex-shrink-0 text-white bg-icon-bg-projects"><i class="fas fa-laptop-code text-base" aria-hidden="true"></i></span>
+              <span id="projects-title-text">Projets GitHub Récents</span>
+            </h2>
+            <div class="relative mb-6">
+              <div id="projets-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                <!-- USER_DATA_START:PROJECTS_LIST -->
+                <div class="pagination-item border border-secondary rounded-xl p-4 sm:p-6 bg-slate-50 hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                  <div class="flex items-start space-x-4">
+                    <div class="p-3 rounded-lg shadow-sm flex-shrink-0 mt-1 text-white bg-project-icon-green"><i class="fas fa-question-circle text-xl" aria-hidden="true"></i></div>
+                    <div class="flex-1 text-center xs:text-left">
+                        <h3 class="text-lg sm:text-xl font-semibold text-text-main mb-2">Quiz App</h3>
+                        <p class="text-text-muted mb-3 sm:mb-4 text-sm leading-relaxed">Application web interactive pour s'entraîner aux questions de type certification, avec suivi des scores et feedback.</p>
+                        <a href="https://htshongany.github.io/certification-quizzes/quiz-app/index.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded-md bg-primary text-text-on-primary hover:bg-primary-dark transition-colors duration-200 text-xs sm:text-sm font-medium shadow-sm focus-visible:outline-primary focus-visible:outline-offset-2">
+                          <i class="fas fa-external-link-alt mr-1.5" aria-hidden="true"></i>Voir le projet
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="pagination-item border border-secondary rounded-xl p-4 sm:p-6 bg-slate-50 hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                  <div class="flex items-start space-x-4">
+                    <div class="p-3 rounded-lg shadow-sm flex-shrink-0 mt-1 text-white bg-project-icon-slate"><i class="fab fa-github text-xl" aria-hidden="true"></i></div>
+                    <div class="flex-1 text-center xs:text-left">
+                        <h3 class="text-lg sm:text-xl font-semibold text-text-main mb-2">Portfolio GitHub</h3>
+                        <p class="text-text-muted mb-3 sm:mb-4 text-sm leading-relaxed">Explorez l'ensemble de mes contributions et projets open source sur GitHub.</p>
+                        <a href="https://github.com/htshongany" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded-md bg-github-btn-bg text-github-btn-text hover:bg-github-btn-hover-bg transition-colors duration-200 text-xs sm:text-sm font-medium shadow-sm focus-visible:outline-primary focus-visible:outline-offset-2">
+                          <i class="fab fa-github mr-1.5" aria-hidden="true"></i>Voir sur GitHub
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="pagination-item border border-secondary rounded-xl p-4 sm:p-6 bg-slate-50 hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                  <div class="flex items-start space-x-4">
+                    <div class="p-3 rounded-lg shadow-sm flex-shrink-0 mt-1 text-white bg-project-icon-sky"><i class="fas fa-tools text-xl" aria-hidden="true"></i></div>
+                    <div class="flex-1 text-center xs:text-left">
+                        <h3 class="text-lg sm:text-xl font-semibold text-text-main mb-2">Projet Exemple 3</h3>
+                        <p class="text-text-muted mb-3 sm:mb-4 text-sm leading-relaxed">Description du troisième projet, peut-être un outil CLI ou une API.</p>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded-md bg-primary text-text-on-primary hover:bg-primary-dark transition-colors duration-200 text-xs sm:text-sm font-medium shadow-sm focus-visible:outline-primary focus-visible:outline-offset-2">
+                           <i class="fas fa-external-link-alt mr-1.5" aria-hidden="true"></i>Voir le projet
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="pagination-item border border-secondary rounded-xl p-4 sm:p-6 bg-slate-50 hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                  <div class="flex items-start space-x-4">
+                    <div class="p-3 rounded-lg shadow-sm flex-shrink-0 mt-1 text-white bg-project-icon-rose"><i class="fas fa-rocket text-xl" aria-hidden="true"></i></div>
+                    <div class="flex-1 text-center xs:text-left">
+                        <h3 class="text-lg sm:text-xl font-semibold text-text-main mb-2">Projet Exemple 4</h3>
+                        <p class="text-text-muted mb-3 sm:mb-4 text-sm leading-relaxed">Description d'un autre projet, axé sur la data science ou le machine learning.</p>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded-md bg-primary text-text-on-primary hover:bg-primary-dark transition-colors duration-200 text-xs sm:text-sm font-medium shadow-sm focus-visible:outline-primary focus-visible:outline-offset-2">
+                           <i class="fas fa-external-link-alt mr-1.5" aria-hidden="true"></i>Voir le projet
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <!-- USER_DATA_END:PROJECTS_LIST -->
+              </div>
+              <button id="projets-prev" aria-label="Projet précédent" class="hidden absolute top-1/2 -translate-y-1/2 left-0 transform -translate-x-[calc(50%+0.25rem)] sm:-translate-x-[calc(100%+0.25rem)] bg-pagination-btn-bg hover:bg-pagination-btn-hover-bg text-white p-2 rounded-full w-9 h-9 flex items-center justify-center shadow-md z-10 focus-visible:outline-primary focus-visible:outline-offset-1"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+              <button id="projets-next" aria-label="Projet suivant" class="hidden absolute top-1/2 -translate-y-1/2 right-0 transform translate-x-[calc(50%+0.25rem)] sm:translate-x-[calc(100%+0.25rem)] bg-pagination-btn-bg hover:bg-pagination-btn-hover-bg text-white p-2 rounded-full w-9 h-9 flex items-center justify-center shadow-md z-10 focus-visible:outline-primary focus-visible:outline-offset-1"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+            </div>
+          </section>
         </div>
 
-        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-yellow-400">
-            🚧 Site en Construction 🚧
-        </h1>
-        
-        <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8 md:mb-10 text-yellow-500">
-            <div>
-                <div id="days" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-mono font-bold">00</div>
-                <div class="text-xs uppercase tracking-wider mt-1 md:text-sm text-gray-400">Jours</div>
+        <aside class="lg:col-span-1 space-y-10 sm:space-y-12 md:space-y-16">
+          <section id="skills-section" aria-labelledby="skills-title-text" class="bg-card-bg rounded-xl shadow-custom-md p-5 sm:p-6 md:p-8">
+            <h2 class="text-xl sm:text-2xl font-bold mb-6 flex items-center gap-3 text-text-main">
+              <span class="w-8 h-8 sm:w-9 sm:h-9 inline-flex items-center justify-center rounded-lg flex-shrink-0 text-white bg-icon-bg-skills"><i class="fas fa-code text-sm" aria-hidden="true"></i></span>
+              <span id="skills-title-text">Compétences</span>
+            </h2>
+            <div id="skills-content" class="space-y-6">
+              <!-- USER_DATA_START:SKILLS_CATEGORIES -->
+              <div>
+                <h3 class="text-base font-semibold mb-3 uppercase tracking-wider text-text-muted">Langages</h3>
+                <div class="space-y-4">
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">Python</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-python text-white" style="width: 90%;"><span class="text-xs font-bold">90%</span></div></div></div>
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">C</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-c text-white" style="width: 65%;"><span class="text-xs font-bold">65%</span></div></div></div>
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">JavaScript</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-js text-slate-800" style="width: 70%;"><span class="text-xs font-bold">70%</span></div></div></div>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-base font-semibold mb-3 uppercase tracking-wider text-text-muted">Frameworks</h3>
+                <div class="space-y-4">
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">Flask</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-flask text-white" style="width: 85%;"><span class="text-xs font-bold">85%</span></div></div></div>
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">Django</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-django text-white" style="width: 75%;"><span class="text-xs font-bold">75%</span></div></div></div>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-base font-semibold mb-3 uppercase tracking-wider text-text-muted">Outils & Autres</h3>
+                <div class="space-y-4">
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">Git & GitHub</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-git text-white" style="width: 90%;"><span class="text-xs font-bold">90%</span></div></div></div>
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">API REST</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-api text-white" style="width: 80%;"><span class="text-xs font-bold">80%</span></div></div></div>
+                </div>
+              </div>
+              <!-- USER_DATA_END:SKILLS_CATEGORIES -->
             </div>
-            <div>
-                <div id="hours" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-mono font-bold">00</div>
-                <div class="text-xs uppercase tracking-wider mt-1 md:text-sm text-gray-400">Heures</div>
-            </div>
-            <div>
-                <div id="minutes" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-mono font-bold">00</div>
-                <div class="text-xs uppercase tracking-wider mt-1 md:text-sm text-gray-400">Minutes</div>
-            </div>
-            <div>
-                <div id="seconds" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-mono font-bold">00</div>
-                <div class="text-xs uppercase tracking-wider mt-1 md:text-sm text-gray-400">Secondes</div>
-            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <footer id="main-footer" class="bg-footer-bg text-footer-text border-t border-footer-link-hover-bg mt-auto">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+        <h2 id="footer-contact-title" class="text-2xl sm:text-3xl font-bold mb-8 text-center flex items-center justify-center gap-3 text-text-on-dark-bg">
+          <span class="w-9 h-9 inline-flex items-center justify-center rounded-lg flex-shrink-0 text-white bg-primary"><i class="fas fa-link text-sm" aria-hidden="true"></i></span>
+          <span>Contact & Réseaux</span>
+        </h2>
+        <div id="footer-social-links" class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <!-- USER_DATA_START:FOOTER_SOCIAL_LINKS (Identique au header pour la source des données, mais style différent) -->
+          <a href="mailto:sirehtshongany@gmail.com" class="flex items-center p-3 sm:p-4 rounded-lg bg-footer-link-hover-bg hover:bg-opacity-80 transition-all duration-200 group transform hover:scale-105 focus:scale-105 focus-visible:outline-primary focus-visible:outline-offset-1"><div class="text-white p-2 sm:p-2.5 rounded-lg mr-3 shadow-md group-hover:shadow-lg transition-shadow duration-200 flex-shrink-0 bg-red-500"><i class="fas fa-envelope fa-fw text-base" aria-hidden="true"></i></div><div class="min-w-0 flex-1"><div class="font-semibold text-sm text-text-on-dark-bg">Email</div><div class="text-xs text-slate-400 group-hover:text-slate-200 transition-colors truncate">Me contacter</div></div></a>
+          <a href="https://github.com/htshongany" target="_blank" rel="noopener noreferrer" class="flex items-center p-3 sm:p-4 rounded-lg bg-footer-link-hover-bg hover:bg-opacity-80 transition-all duration-200 group transform hover:scale-105 focus:scale-105 focus-visible:outline-primary focus-visible:outline-offset-1"><div class="text-white p-2 sm:p-2.5 rounded-lg mr-3 shadow-md group-hover:shadow-lg transition-shadow duration-200 flex-shrink-0 bg-slate-900"><i class="fab fa-github fa-fw text-base" aria-hidden="true"></i></div><div class="min-w-0 flex-1"><div class="font-semibold text-sm text-text-on-dark-bg">GitHub</div><div class="text-xs text-slate-400 group-hover:text-slate-200 transition-colors truncate">htshongany</div></div></a>
+          <a href="https://www.linkedin.com/in/hamadou-tshongany-ba8678168" target="_blank" rel="noopener noreferrer" class="flex items-center p-3 sm:p-4 rounded-lg bg-footer-link-hover-bg hover:bg-opacity-80 transition-all duration-200 group transform hover:scale-105 focus:scale-105 focus-visible:outline-primary focus-visible:outline-offset-1"><div class="text-white p-2 sm:p-2.5 rounded-lg mr-3 shadow-md group-hover:shadow-lg transition-shadow duration-200 flex-shrink-0 bg-blue-600"><i class="fab fa-linkedin fa-fw text-base" aria-hidden="true"></i></div><div class="min-w-0 flex-1"><div class="font-semibold text-sm text-text-on-dark-bg">LinkedIn</div><div class="text-xs text-slate-400 group-hover:text-slate-200 transition-colors truncate">Hamadou Tshongany</div></div></a>
+          <a href="https://twitter.com/tshongany" target="_blank" rel="noopener noreferrer" class="flex items-center p-3 sm:p-4 rounded-lg bg-footer-link-hover-bg hover:bg-opacity-80 transition-all duration-200 group transform hover:scale-105 focus:scale-105 focus-visible:outline-primary focus-visible:outline-offset-1"><div class="text-white p-2 sm:p-2.5 rounded-lg mr-3 shadow-md group-hover:shadow-lg transition-shadow duration-200 flex-shrink-0 bg-sky-500"><i class="fab fa-twitter fa-fw text-base" aria-hidden="true"></i></div><div class="min-w-0 flex-1"><div class="font-semibold text-sm text-text-on-dark-bg">Twitter</div><div class="text-xs text-slate-400 group-hover:text-slate-200 transition-colors truncate">@tshongany</div></div></a>
+          <!-- USER_DATA_END:FOOTER_SOCIAL_LINKS -->
         </div>
-
-        <p id="launch-message" class="text-xs sm:text-sm md:text-base text-gray-400">
-            Lancement prévu pour <span id="target-day" class="font-semibold text-yellow-400">Dimanche</span> prochain !
-        </p>
-
-    </div>
-
-    <footer class="mt-6 sm:mt-8 md:mt-10 text-center text-xs sm:text-sm text-gray-500">
-        © <span id="current-year"></span> VotreEntreprise. Tous droits réservés.
+        <div class="text-center mt-10 pt-6 border-t border-footer-link-hover-bg">
+          <p class="text-sm">© <span id="currentYear"></span> Hamadou Tshongany <span class="mx-2">•</span>
+            <a id="license-link" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license noopener" class="hover:text-primary transition-colors focus-visible:outline-primary focus-visible:outline-offset-1">
+              <i class="fab fa-creative-commons" aria-label="Creative Commons"></i><i class="fab fa-creative-commons-by" aria-label="Attribution"></i><i class="fab fa-creative-commons-sa" aria-label="Share Alike"></i> Ce travail est sous licence CC BY-SA 4.0
+            </a>
+          </p>
+        </div>
+      </div>
     </footer>
+  </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const daysEl = document.getElementById('days');
-            const hoursEl = document.getElementById('hours');
-            const minutesEl = document.getElementById('minutes');
-            const secondsEl = document.getElementById('seconds');
-            const countdownEl = document.getElementById('countdown');
-            const launchMessageEl = document.getElementById('launch-message');
-            const targetDayEl = document.getElementById('target-day');
-            document.getElementById('current-year').textContent = new Date().getFullYear();
+  <button id="backToTop" aria-label="Retour en haut de page" class="fixed bottom-4 right-4 bg-primary hover:bg-primary-dark text-white w-10 h-10 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 invisible focus-visible:outline-primary focus-visible:outline-offset-1"><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
 
-            // Définir la date cible : 3 jours à partir de maintenant (exemple)
-            let targetDate = new Date();
-            targetDate.setDate(targetDate.getDate() + 3);
-            // Optionnel: pour cibler minuit précis d'un jour futur
-            // targetDate = new Date("2024-12-25T00:00:00"); // ex: new Date("YYYY-MM-DDTHH:MM:SS")
-            // ou pour minuit du jour X:
-            // targetDate.setHours(0, 0, 0, 0); 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentYearEl = document.getElementById('currentYear');
+      if (currentYearEl) currentYearEl.textContent = new Date().getFullYear();
 
-            // Mettre à jour le nom du jour cible
-            const daysOfWeek = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
-            targetDayEl.textContent = daysOfWeek[targetDate.getDay()];
+      setupPagination('badges-grid', 'badges-prev', 'badges-next', 3, 2);
+      setupPagination('libraries-grid', 'libraries-prev', 'libraries-next', 1, 1);
+      setupPagination('projets-grid', 'projets-prev', 'projets-next', 2, 1);
 
+      const backToTopButton = document.getElementById('backToTop');
+      if (backToTopButton) {
+        const toggleBackToTopButton = () => {
+          if (window.pageYOffset > 300) {
+            backToTopButton.classList.remove('opacity-0', 'invisible');
+            backToTopButton.classList.add('opacity-100', 'visible');
+          } else {
+            backToTopButton.classList.remove('opacity-100', 'visible');
+            backToTopButton.classList.add('opacity-0', 'invisible');
+          }
+        };
+        window.addEventListener('scroll', toggleBackToTopButton);
+        backToTopButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        toggleBackToTopButton(); // Initial check
+      }
+    });
 
-            function updateCountdown() {
-                const now = new Date().getTime();
-                const distance = targetDate.getTime() - now;
+    function setupPagination(gridId, prevBtnId, nextBtnId, itemsPerPageDesktop, itemsPerPageMobile) {
+      const grid = document.getElementById(gridId);
+      if (!grid) return;
+      const items = Array.from(grid.querySelectorAll('.pagination-item'));
+      const prevButton = document.getElementById(prevBtnId);
+      const nextButton = document.getElementById(nextBtnId);
 
-                if (distance < 0) {
-                    clearInterval(interval);
-                    // Message de lancement avec des tailles de police responsives
-                    countdownEl.innerHTML = "<div class='col-span-2 sm:col-span-4 text-xl sm:text-2xl md:text-3xl text-green-400 py-4'>🚀 Le site est lancé !</div>";
-                    launchMessageEl.textContent = "Bienvenue sur notre nouveau site !";
-                    launchMessageEl.classList.remove('text-gray-400');
-                    launchMessageEl.classList.add('text-green-300', 'font-semibold', 'text-sm', 'sm:text-base'); // Assurer la responsivité du message
-                    return;
-                }
+      if (!prevButton || !nextButton || items.length === 0) {
+        if(prevButton) prevButton.classList.add('hidden');
+        if(nextButton) nextButton.classList.add('hidden');
+        return;
+      }
 
-                const d = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const s = Math.floor((distance % (1000 * 60)) / 1000);
+      let startIndex = 0;
+      let itemsToDisplayCount = window.innerWidth < 768 ? itemsPerPageMobile : itemsPerPageDesktop;
 
-                daysEl.textContent = String(d).padStart(2, '0');
-                hoursEl.textContent = String(h).padStart(2, '0');
-                minutesEl.textContent = String(m).padStart(2, '0');
-                secondsEl.textContent = String(s).padStart(2, '0');
-            }
-
-            const interval = setInterval(updateCountdown, 1000);
-            updateCountdown(); // Appel initial pour afficher immédiatement
+      function displayItems() {
+        items.forEach((item, index) => {
+          item.classList.toggle('hidden', !(index >= startIndex && index < startIndex + itemsToDisplayCount));
+          // For credly badges that need 'flex' or other display property
+          if (item.classList.contains('credly-badge-container')) {
+            item.style.display = (index >= startIndex && index < startIndex + itemsToDisplayCount) ? 'flex' : 'none';
+          }
         });
-    </script>
+        prevButton.classList.toggle('hidden', startIndex === 0);
+        nextButton.classList.toggle('hidden', startIndex + itemsToDisplayCount >= items.length);
+        if (items.length <= itemsToDisplayCount) {
+          prevButton.classList.add('hidden');
+          nextButton.classList.add('hidden');
+        }
+      }
 
+      function updateItemsPerPageAndDisplay() {
+        const oldItemsToDisplayCount = itemsToDisplayCount;
+        itemsToDisplayCount = window.innerWidth < 768 ? itemsPerPageMobile : itemsPerPageDesktop;
+        if (oldItemsToDisplayCount !== itemsToDisplayCount) {
+          if (items.length > itemsToDisplayCount && startIndex + itemsToDisplayCount > items.length) {
+            startIndex = Math.max(0, items.length - itemsToDisplayCount);
+          } else if (items.length <= itemsToDisplayCount) {
+            startIndex = 0;
+          }
+          displayItems();
+        }
+      }
+
+      prevButton.addEventListener('click', () => {
+        const step = (itemsPerPageDesktop === 1 && itemsPerPageMobile === 1) ? 1 : itemsToDisplayCount;
+        startIndex = Math.max(0, startIndex - step);
+        displayItems();
+      });
+
+      nextButton.addEventListener('click', () => {
+        const step = (itemsPerPageDesktop === 1 && itemsPerPageMobile === 1) ? 1 : itemsToDisplayCount;
+        if (startIndex + step < items.length) {
+             if (startIndex + step + itemsToDisplayCount <= items.length) startIndex += step;
+             else startIndex = items.length - itemsToDisplayCount;
+        }
+        startIndex = Math.min(items.length - itemsToDisplayCount, Math.max(0, startIndex));
+        displayItems();
+      });
+
+      window.addEventListener('resize', updateItemsPerPageAndDisplay);
+      items.forEach(item => {
+          item.classList.add('hidden');
+          if (item.classList.contains('credly-badge-container')) {
+              item.style.display = 'none';
+          }
+      });
+      displayItems();
+    }
+  </script>
 </body>
 </html>
