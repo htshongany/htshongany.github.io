@@ -72,13 +72,22 @@
             'project-icon-sky': '#0ea5e9',
             'project-icon-rose': '#f43f5e',
             // Couleurs spécifiques pour les compétences
-            'skill-python': '#3b82f6',
-            'skill-c': '#64748b',
-            'skill-js': '#facc15',
-            'skill-flask': '#22c55e',
-            'skill-django': '#f97316',
-            'skill-git': '#a855f7',
-            'skill-api': '#0ea5e9',
+            'skill-python': '#3b82f6', // Bleu pour Python
+            'skill-js': '#facc15',    // Jaune pour JavaScript
+            'skill-sql': '#0ea5e9',   // Bleu ciel pour SQL
+            'skill-c': '#64748b',     // Gris pour C
+            'skill-php': '#a855f7',   // Violet pour PHP
+            'skill-dart': '#06b6d4',  // Cyan pour Dart
+            'skill-flask': '#22c55e', // Vert pour Flask
+            'skill-django': '#f97316',// Orange pour Django
+            'skill-flutter': '#3b82f6',// Bleu (similaire à Python/Dart) pour Flutter
+            'skill-git': '#a855f7',   // Violet pour Git (réutilisation)
+            'skill-linux': '#475569', // Gris ardoise pour Linux
+            'skill-docker': '#0891b2',// Cyan plus foncé pour Docker
+            'skill-renpy': '#ec4899', // Rose pour Ren'Py
+            'skill-langchain': '#6366f1', // Indigo pour Langchain
+            'skill-prompt': '#84cc16',// Vert citron pour Prompt Eng.
+            'skill-n8n': '#e11d48',   // Rose foncé pour n8n
             // Couleurs pour boutons spécifiques plateformes
             'github-btn-bg': '#24292e',
             'github-btn-text': '#ffffff',
@@ -155,7 +164,7 @@
             <ul id="header-social-links" class="flex flex-wrap justify-center md:justify-start gap-x-4 sm:gap-x-5 gap-y-2 my-4 sm:my-5">
               <li><a href="mailto:sirehtshongany@gmail.com" class="text-blue-50 hover:text-white transition-colors duration-200 flex items-center gap-1.5 text-xs sm:text-sm"><i class="fas fa-envelope fa-fw" aria-hidden="true"></i> Email</a></li>
               <li><a href="https://github.com/htshongany" target="_blank" rel="noopener noreferrer" class="text-blue-50 hover:text-white transition-colors duration-200 flex items-center gap-1.5 text-xs sm:text-sm"><i class="fab fa-github fa-fw" aria-hidden="true"></i> GitHub</a></li>
-              <li><a href="https://www.linkedin.com/in/hamadou-tshongany-ba8678168" target="_blank" rel="noopener noreferrer" class="text-blue-50 hover:text-white transition-colors duration-200 flex items-center gap-1.5 text-xs sm:text-sm"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i> LinkedIn</a></li>
+              <li><a href="https://www.linkedin.com/in/hamadou-tshongany" target="_blank" rel="noopener noreferrer" class="text-blue-50 hover:text-white transition-colors duration-200 flex items-center gap-1.5 text-xs sm:text-sm"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i> LinkedIn</a></li>
               <li><a href="https://twitter.com/tshongany" target="_blank" rel="noopener noreferrer" class="text-blue-50 hover:text-white transition-colors duration-200 flex items-center gap-1.5 text-xs sm:text-sm"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i> Twitter</a></li>
             </ul>
             <div class="mt-4">
@@ -242,51 +251,20 @@
             <div class="relative mb-6">
               <div id="projets-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                 <!-- USER_DATA_START:PROJECTS_LIST -->
-                <div class="pagination-item border border-secondary rounded-xl p-4 sm:p-6 bg-slate-50 hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1">
+                <div class="pagination-item md:col-span-2 border border-secondary rounded-xl p-4 sm:p-6 bg-slate-50 hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1">
                   <div class="flex items-start space-x-4">
                     <div class="p-3 rounded-lg shadow-sm flex-shrink-0 mt-1 text-white bg-project-icon-green"><i class="fas fa-question-circle text-xl" aria-hidden="true"></i></div>
-                    <div class="flex-1 text-center xs:text-left">
+                    <div class="flex-1 text-left"> <!-- Changed from text-center xs:text-left -->
                         <h3 class="text-lg sm:text-xl font-semibold text-text-main mb-2">Quiz App</h3>
                         <p class="text-text-muted mb-3 sm:mb-4 text-sm leading-relaxed">Application web interactive pour s'entraîner aux questions de type certification, avec suivi des scores et feedback.</p>
-                        <a href="https://htshongany.github.io/certification-quizzes/quiz-app/index.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded-md bg-primary text-text-on-primary hover:bg-primary-dark transition-colors duration-200 text-xs sm:text-sm font-medium shadow-sm focus-visible:outline-primary focus-visible:outline-offset-2">
-                          <i class="fas fa-external-link-alt mr-1.5" aria-hidden="true"></i>Voir le projet
-                        </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="pagination-item border border-secondary rounded-xl p-4 sm:p-6 bg-slate-50 hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-                  <div class="flex items-start space-x-4">
-                    <div class="p-3 rounded-lg shadow-sm flex-shrink-0 mt-1 text-white bg-project-icon-slate"><i class="fab fa-github text-xl" aria-hidden="true"></i></div>
-                    <div class="flex-1 text-center xs:text-left">
-                        <h3 class="text-lg sm:text-xl font-semibold text-text-main mb-2">Portfolio GitHub</h3>
-                        <p class="text-text-muted mb-3 sm:mb-4 text-sm leading-relaxed">Explorez l'ensemble de mes contributions et projets open source sur GitHub.</p>
-                        <a href="https://github.com/htshongany" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded-md bg-github-btn-bg text-github-btn-text hover:bg-github-btn-hover-bg transition-colors duration-200 text-xs sm:text-sm font-medium shadow-sm focus-visible:outline-primary focus-visible:outline-offset-2">
-                          <i class="fab fa-github mr-1.5" aria-hidden="true"></i>Voir sur GitHub
-                        </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="pagination-item border border-secondary rounded-xl p-4 sm:p-6 bg-slate-50 hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-                  <div class="flex items-start space-x-4">
-                    <div class="p-3 rounded-lg shadow-sm flex-shrink-0 mt-1 text-white bg-project-icon-sky"><i class="fas fa-tools text-xl" aria-hidden="true"></i></div>
-                    <div class="flex-1 text-center xs:text-left">
-                        <h3 class="text-lg sm:text-xl font-semibold text-text-main mb-2">Projet Exemple 3</h3>
-                        <p class="text-text-muted mb-3 sm:mb-4 text-sm leading-relaxed">Description du troisième projet, peut-être un outil CLI ou une API.</p>
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded-md bg-primary text-text-on-primary hover:bg-primary-dark transition-colors duration-200 text-xs sm:text-sm font-medium shadow-sm focus-visible:outline-primary focus-visible:outline-offset-2">
-                           <i class="fas fa-external-link-alt mr-1.5" aria-hidden="true"></i>Voir le projet
-                        </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="pagination-item border border-secondary rounded-xl p-4 sm:p-6 bg-slate-50 hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1">
-                  <div class="flex items-start space-x-4">
-                    <div class="p-3 rounded-lg shadow-sm flex-shrink-0 mt-1 text-white bg-project-icon-rose"><i class="fas fa-rocket text-xl" aria-hidden="true"></i></div>
-                    <div class="flex-1 text-center xs:text-left">
-                        <h3 class="text-lg sm:text-xl font-semibold text-text-main mb-2">Projet Exemple 4</h3>
-                        <p class="text-text-muted mb-3 sm:mb-4 text-sm leading-relaxed">Description d'un autre projet, axé sur la data science ou le machine learning.</p>
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded-md bg-primary text-text-on-primary hover:bg-primary-dark transition-colors duration-200 text-xs sm:text-sm font-medium shadow-sm focus-visible:outline-primary focus-visible:outline-offset-2">
-                           <i class="fas fa-external-link-alt mr-1.5" aria-hidden="true"></i>Voir le projet
-                        </a>
+                        <div class="flex flex-row flex-wrap justify-start gap-2 mt-3"> <!-- Ensures buttons are side-by-side with a gap -->
+                            <a href="https://htshongany.github.io/certification-quizzes/quiz-app/index.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded-md bg-primary text-text-on-primary hover:bg-primary-dark transition-colors duration-200 text-xs sm:text-sm font-medium shadow-sm focus-visible:outline-primary focus-visible:outline-offset-2">
+                              <i class="fas fa-external-link-alt mr-1.5" aria-hidden="true"></i>Voir le projet
+                            </a>
+                            <a href="https://github.com/htshongany/certification-quizzes" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 rounded-md bg-github-btn-bg text-github-btn-text hover:bg-github-btn-hover-bg transition-colors duration-200 text-xs sm:text-sm font-medium shadow-sm focus-visible:outline-primary focus-visible:outline-offset-2">
+                                <i class="fab fa-github mr-1.5" aria-hidden="true"></i>Dépôt GitHub
+                            </a>
+                        </div>
                     </div>
                   </div>
                 </div>
@@ -310,22 +288,36 @@
                 <h3 class="text-base font-semibold mb-3 uppercase tracking-wider text-text-muted">Langages</h3>
                 <div class="space-y-4">
                   <div><h4 class="text-sm font-medium mb-1.5 text-text-main">Python</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-python text-white" style="width: 90%;"><span class="text-xs font-bold">90%</span></div></div></div>
-                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">C</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-c text-white" style="width: 65%;"><span class="text-xs font-bold">65%</span></div></div></div>
-                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">JavaScript</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-js text-slate-800" style="width: 70%;"><span class="text-xs font-bold">70%</span></div></div></div>
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">JavaScript</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-js text-slate-800" style="width: 60%;"><span class="text-xs font-bold">60%</span></div></div></div>
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">SQL</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-sql text-white" style="width: 70%;"><span class="text-xs font-bold">70%</span></div></div></div>
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">C</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-c text-white" style="width: 70%;"><span class="text-xs font-bold">70%</span></div></div></div>
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">PHP</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-php text-white" style="width: 50%;"><span class="text-xs font-bold">50%</span></div></div></div>
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">Dart</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-dart text-white" style="width: 60%;"><span class="text-xs font-bold">60%</span></div></div></div>
                 </div>
               </div>
               <div>
                 <h3 class="text-base font-semibold mb-3 uppercase tracking-wider text-text-muted">Frameworks</h3>
                 <div class="space-y-4">
-                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">Flask</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-flask text-white" style="width: 85%;"><span class="text-xs font-bold">85%</span></div></div></div>
-                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">Django</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-django text-white" style="width: 75%;"><span class="text-xs font-bold">75%</span></div></div></div>
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">Flask</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-flask text-white" style="width: 70%;"><span class="text-xs font-bold">70%</span></div></div></div>
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">Django</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-django text-white" style="width: 80%;"><span class="text-xs font-bold">80%</span></div></div></div>
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">Flutter</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-flutter text-white" style="width: 50%;"><span class="text-xs font-bold">50%</span></div></div></div>
                 </div>
               </div>
               <div>
                 <h3 class="text-base font-semibold mb-3 uppercase tracking-wider text-text-muted">Outils & Autres</h3>
                 <div class="space-y-4">
-                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">Git & GitHub</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-git text-white" style="width: 90%;"><span class="text-xs font-bold">90%</span></div></div></div>
-                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">API REST</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-api text-white" style="width: 80%;"><span class="text-xs font-bold">80%</span></div></div></div>
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">Git & GitHub</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-git text-white" style="width: 70%;"><span class="text-xs font-bold">70%</span></div></div></div>
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">LINUX</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-linux text-white" style="width: 70%;"><span class="text-xs font-bold">70%</span></div></div></div>
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">Docker</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-docker text-white" style="width: 50%;"><span class="text-xs font-bold">50%</span></div></div></div>
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">Ren'Py</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-renpy text-white" style="width: 60%;"><span class="text-xs font-bold">60%</span></div></div></div>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-base font-semibold mb-3 uppercase tracking-wider text-text-muted">AI</h3>
+                <div class="space-y-4">
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">Langchain</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-langchain text-white" style="width: 60%;"><span class="text-xs font-bold">60%</span></div></div></div>
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">Prompt Engineering</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-prompt text-slate-800" style="width: 90%;"><span class="text-xs font-bold">90%</span></div></div></div>
+                  <div><h4 class="text-sm font-medium mb-1.5 text-text-main">n8n</h4><div class="w-full bg-slate-200 rounded-sm h-7 shadow-inner overflow-hidden"><div class="h-full rounded-sm flex items-center justify-center px-2.5 bg-skill-n8n text-white" style="width: 70%;"><span class="text-xs font-bold">70%</span></div></div></div>
                 </div>
               </div>
               <!-- USER_DATA_END:SKILLS_CATEGORIES -->
@@ -345,7 +337,7 @@
           <!-- USER_DATA_START:FOOTER_SOCIAL_LINKS (Identique au header pour la source des données, mais style différent) -->
           <a href="mailto:sirehtshongany@gmail.com" class="flex items-center p-3 sm:p-4 rounded-lg bg-footer-link-hover-bg hover:bg-opacity-80 transition-all duration-200 group transform hover:scale-105 focus:scale-105 focus-visible:outline-primary focus-visible:outline-offset-1"><div class="text-white p-2 sm:p-2.5 rounded-lg mr-3 shadow-md group-hover:shadow-lg transition-shadow duration-200 flex-shrink-0 bg-red-500"><i class="fas fa-envelope fa-fw text-base" aria-hidden="true"></i></div><div class="min-w-0 flex-1"><div class="font-semibold text-sm text-text-on-dark-bg">Email</div><div class="text-xs text-slate-400 group-hover:text-slate-200 transition-colors truncate">Me contacter</div></div></a>
           <a href="https://github.com/htshongany" target="_blank" rel="noopener noreferrer" class="flex items-center p-3 sm:p-4 rounded-lg bg-footer-link-hover-bg hover:bg-opacity-80 transition-all duration-200 group transform hover:scale-105 focus:scale-105 focus-visible:outline-primary focus-visible:outline-offset-1"><div class="text-white p-2 sm:p-2.5 rounded-lg mr-3 shadow-md group-hover:shadow-lg transition-shadow duration-200 flex-shrink-0 bg-slate-900"><i class="fab fa-github fa-fw text-base" aria-hidden="true"></i></div><div class="min-w-0 flex-1"><div class="font-semibold text-sm text-text-on-dark-bg">GitHub</div><div class="text-xs text-slate-400 group-hover:text-slate-200 transition-colors truncate">htshongany</div></div></a>
-          <a href="https://www.linkedin.com/in/hamadou-tshongany-ba8678168" target="_blank" rel="noopener noreferrer" class="flex items-center p-3 sm:p-4 rounded-lg bg-footer-link-hover-bg hover:bg-opacity-80 transition-all duration-200 group transform hover:scale-105 focus:scale-105 focus-visible:outline-primary focus-visible:outline-offset-1"><div class="text-white p-2 sm:p-2.5 rounded-lg mr-3 shadow-md group-hover:shadow-lg transition-shadow duration-200 flex-shrink-0 bg-blue-600"><i class="fab fa-linkedin fa-fw text-base" aria-hidden="true"></i></div><div class="min-w-0 flex-1"><div class="font-semibold text-sm text-text-on-dark-bg">LinkedIn</div><div class="text-xs text-slate-400 group-hover:text-slate-200 transition-colors truncate">Hamadou Tshongany</div></div></a>
+          <a href="https://www.linkedin.com/in/hamadou-tshongany" target="_blank" rel="noopener noreferrer" class="flex items-center p-3 sm:p-4 rounded-lg bg-footer-link-hover-bg hover:bg-opacity-80 transition-all duration-200 group transform hover:scale-105 focus:scale-105 focus-visible:outline-primary focus-visible:outline-offset-1"><div class="text-white p-2 sm:p-2.5 rounded-lg mr-3 shadow-md group-hover:shadow-lg transition-shadow duration-200 flex-shrink-0 bg-blue-600"><i class="fab fa-linkedin fa-fw text-base" aria-hidden="true"></i></div><div class="min-w-0 flex-1"><div class="font-semibold text-sm text-text-on-dark-bg">LinkedIn</div><div class="text-xs text-slate-400 group-hover:text-slate-200 transition-colors truncate">Hamadou Tshongany</div></div></a>
           <a href="https://twitter.com/tshongany" target="_blank" rel="noopener noreferrer" class="flex items-center p-3 sm:p-4 rounded-lg bg-footer-link-hover-bg hover:bg-opacity-80 transition-all duration-200 group transform hover:scale-105 focus:scale-105 focus-visible:outline-primary focus-visible:outline-offset-1"><div class="text-white p-2 sm:p-2.5 rounded-lg mr-3 shadow-md group-hover:shadow-lg transition-shadow duration-200 flex-shrink-0 bg-sky-500"><i class="fab fa-twitter fa-fw text-base" aria-hidden="true"></i></div><div class="min-w-0 flex-1"><div class="font-semibold text-sm text-text-on-dark-bg">Twitter</div><div class="text-xs text-slate-400 group-hover:text-slate-200 transition-colors truncate">@tshongany</div></div></a>
           <!-- USER_DATA_END:FOOTER_SOCIAL_LINKS -->
         </div>
