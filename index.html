@@ -38,81 +38,8 @@
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
   <!-- USER_DATA_END:FAVICON -->
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    // Configuration Tailwind
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-          },
-          colors: {
-            // USER_DATA_START:THEME_COLORS
-            primary: '#2563eb',
-            'primary-dark': '#1d4ed8',
-            secondary: '#64748b',
-            'light-bg': '#f8fafc',
-            'card-bg': '#ffffff',
-            'text-main': '#1f293b',
-            'text-muted': '#64748b',
-            'text-on-primary': '#ffffff',
-            'text-on-dark-bg': '#e2e8f0',
-            'icon-bg-python': '#3b82f6',
-            'icon-bg-projects': '#8b5cf6',
-            'icon-bg-badges': '#f59e0b',
-            'icon-bg-skills': '#10b981',
-            'pagination-btn-bg': '#10b981',
-            'pagination-btn-hover-bg': '#059669',
-            'footer-bg': '#1e293b',
-            'footer-text': '#94a3b8',
-            'footer-link-hover-bg': '#334155',
-            // Couleurs spécifiques pour les projets
-            'project-icon-green': '#22c55e',
-            'project-icon-slate': '#1e293b',
-            'project-icon-sky': '#0ea5e9',
-            'project-icon-rose': '#f43f5e',
-            // Couleurs spécifiques pour les compétences
-            'skill-python': '#3b82f6', // Bleu pour Python
-            'skill-js': '#facc15',    // Jaune pour JavaScript
-            'skill-sql': '#0ea5e9',   // Bleu ciel pour SQL
-            'skill-c': '#64748b',     // Gris pour C
-            'skill-php': '#a855f7',   // Violet pour PHP
-            'skill-dart': '#06b6d4',  // Cyan pour Dart
-            'skill-flask': '#22c55e', // Vert pour Flask
-            'skill-django': '#f97316',// Orange pour Django
-            'skill-flutter': '#3b82f6',// Bleu (similaire à Python/Dart) pour Flutter
-            'skill-git': '#a855f7',   // Violet pour Git (réutilisation)
-            'skill-linux': '#475569', // Gris ardoise pour Linux
-            'skill-docker': '#0891b2',// Cyan plus foncé pour Docker
-            'skill-renpy': '#ec4899', // Rose pour Ren'Py
-            'skill-langchain': '#6366f1', // Indigo pour Langchain
-            'skill-prompt': '#84cc16',// Vert citron pour Prompt Eng.
-            'skill-n8n': '#e11d48',   // Rose foncé pour n8n
-            // Couleurs pour boutons spécifiques plateformes
-            'github-btn-bg': '#24292e',
-            'github-btn-text': '#ffffff',
-            'github-btn-hover-bg': '#383f45',
-            'pypi-btn-bg': '#ffd343',
-            'pypi-btn-text': '#3775a9',
-            'pypi-btn-hover-bg': '#ffda66',
-            // Couleurs pour la scrollbar
-            'scrollbar-track': '#e2e8f0', // slate-200
-            'scrollbar-thumb': '#2563eb', // primary
-            'scrollbar-thumb-hover': '#1d4ed8' // primary-dark
-            // USER_DATA_END:THEME_COLORS
-          },
-          boxShadow: {
-            'custom-light': '0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.07)',
-            'custom-md': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)',
-          },
-          screens: {
-            'xs': '475px',
-          }
-        }
-      }
-    }
-  </script>
+  <link href="css/output.css" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     html { scroll-behavior: smooth; }
@@ -203,8 +130,8 @@
                 </div>
                 <!-- USER_DATA_END:BADGES_LIST -->
               </div>
-              <button id="badges-prev" aria-label="Badge précédent" class="hidden absolute top-1/2 -translate-y-1/2 left-0 transform -translate-x-[calc(50%+0.25rem)] sm:-translate-x-[calc(100%+0.25rem)] bg-pagination-btn-bg hover:bg-pagination-btn-hover-bg text-white p-2 rounded-full w-9 h-9 flex items-center justify-center shadow-md z-10 focus-visible:outline-primary focus-visible:outline-offset-1"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
-              <button id="badges-next" aria-label="Badge suivant" class="hidden absolute top-1/2 -translate-y-1/2 right-0 transform translate-x-[calc(50%+0.25rem)] sm:translate-x-[calc(100%+0.25rem)] bg-pagination-btn-bg hover:bg-pagination-btn-hover-bg text-white p-2 rounded-full w-9 h-9 flex items-center justify-center shadow-md z-10 focus-visible:outline-primary focus-visible:outline-offset-1"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+              <button id="badges-prev" aria-label="Badge précédent" class=" absolute top-1/2 -translate-y-1/2 left-0 transform -translate-x-[calc(50%+0.25rem)] sm:-translate-x-[calc(100%+0.25rem)] bg-pagination-btn-bg hover:bg-pagination-btn-hover-bg text-white p-2 rounded-full w-9 h-9 flex items-center justify-center shadow-md z-10 focus-visible:outline-primary focus-visible:outline-offset-1"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+              <button id="badges-next" aria-label="Badge suivant" class="absolute top-1/2 -translate-y-1/2 right-0 transform translate-x-[calc(50%+0.25rem)] sm:translate-x-[calc(100%+0.25rem)] bg-pagination-btn-bg hover:bg-pagination-btn-hover-bg text-white p-2 rounded-full w-9 h-9 flex items-center justify-center shadow-md z-10 focus-visible:outline-primary focus-visible:outline-offset-1"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
             </div>
             <p id="badges-note" class="text-center text-xs mt-4 px-4 text-text-muted">Note: Les badges sont chargés via un script externe. Leur affichage peut varier.</p>
           </section>
@@ -238,8 +165,8 @@
                 </div>
                 <!-- USER_DATA_END:LIBRARIES_LIST -->
               </div>
-              <button id="libraries-prev" aria-label="Bibliothèque précédente" class="hidden absolute top-1/2 -translate-y-1/2 left-0 transform -translate-x-[calc(50%+0.25rem)] sm:-translate-x-[calc(100%+0.25rem)] bg-pagination-btn-bg hover:bg-pagination-btn-hover-bg text-white p-2 rounded-full w-9 h-9 flex items-center justify-center shadow-md z-10 focus-visible:outline-primary focus-visible:outline-offset-1"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
-              <button id="libraries-next" aria-label="Bibliothèque suivante" class="hidden absolute top-1/2 -translate-y-1/2 right-0 transform translate-x-[calc(50%+0.25rem)] sm:translate-x-[calc(100%+0.25rem)] bg-pagination-btn-bg hover:bg-pagination-btn-hover-bg text-white p-2 rounded-full w-9 h-9 flex items-center justify-center shadow-md z-10 focus-visible:outline-primary focus-visible:outline-offset-1"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+              <button id="libraries-prev" aria-label="Bibliothèque précédente" class="absolute top-1/2 -translate-y-1/2 left-0 transform -translate-x-[calc(50%+0.25rem)] sm:-translate-x-[calc(100%+0.25rem)] bg-pagination-btn-bg hover:bg-pagination-btn-hover-bg text-white p-2 rounded-full w-9 h-9 flex items-center justify-center shadow-md z-10 focus-visible:outline-primary focus-visible:outline-offset-1"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+              <button id="libraries-next" aria-label="Bibliothèque suivante" class="absolute top-1/2 -translate-y-1/2 right-0 transform translate-x-[calc(50%+0.25rem)] sm:translate-x-[calc(100%+0.25rem)] bg-pagination-btn-bg hover:bg-pagination-btn-hover-bg text-white p-2 rounded-full w-9 h-9 flex items-center justify-center shadow-md z-10 focus-visible:outline-primary focus-visible:outline-offset-1"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
             </div>
           </section>
 
@@ -271,8 +198,8 @@
                 </div>
                 <!-- USER_DATA_END:PROJECTS_LIST -->
               </div>
-              <button id="projets-prev" aria-label="Projet précédent" class="hidden absolute top-1/2 -translate-y-1/2 left-0 transform -translate-x-[calc(50%+0.25rem)] sm:-translate-x-[calc(100%+0.25rem)] bg-pagination-btn-bg hover:bg-pagination-btn-hover-bg text-white p-2 rounded-full w-9 h-9 flex items-center justify-center shadow-md z-10 focus-visible:outline-primary focus-visible:outline-offset-1"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
-              <button id="projets-next" aria-label="Projet suivant" class="hidden absolute top-1/2 -translate-y-1/2 right-0 transform translate-x-[calc(50%+0.25rem)] sm:translate-x-[calc(100%+0.25rem)] bg-pagination-btn-bg hover:bg-pagination-btn-hover-bg text-white p-2 rounded-full w-9 h-9 flex items-center justify-center shadow-md z-10 focus-visible:outline-primary focus-visible:outline-offset-1"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+              <button id="projets-prev" aria-label="Projet précédent" class=" absolute top-1/2 -translate-y-1/2 left-0 transform -translate-x-[calc(50%+0.25rem)] sm:-translate-x-[calc(100%+0.25rem)] bg-pagination-btn-bg hover:bg-pagination-btn-hover-bg text-white p-2 rounded-full w-9 h-9 flex items-center justify-center shadow-md z-10 focus-visible:outline-primary focus-visible:outline-offset-1"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+              <button id="projets-next" aria-label="Projet suivant" class="absolute top-1/2 -translate-y-1/2 right-0 transform translate-x-[calc(50%+0.25rem)] sm:translate-x-[calc(100%+0.25rem)] bg-pagination-btn-bg hover:bg-pagination-btn-hover-bg text-white p-2 rounded-full w-9 h-9 flex items-center justify-center shadow-md z-10 focus-visible:outline-primary focus-visible:outline-offset-1"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
             </div>
           </section>
         </div>
